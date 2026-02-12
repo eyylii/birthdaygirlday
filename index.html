@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Ucapan Ulang Tahun</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+            text-align: center;
+        }
+
+        .page {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            width: 400px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h1 {
+            color: #6a5acd;
+        }
+
+        p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #6a5acd;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5848c2;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Halaman 1 -->
+    <div id="page1" class="page active">
+        <h1>how's your day bbe? 👋</h1>
+        <button onclick="nextPage()">Klik di sini 🤍</button>
+    </div>
+
+    <!-- Halaman 2 -->
+    <div id="page2" class="page">
+        <h1>🎂 happy special day yeah 🤍</h1>
+        <p>
+            happy birthday bbe 🤍<br><br>
+            Walaupun kita sudah jarang bertemu dan sibuk dengan jalan masing-masing,
+            aku bersyukur banget karena kita nggak pernah benar-benar lost contact.
+            Itu artinya, persahabatan kita bukan cuma soal sering ketemu,
+            tapi soal hati yang tetap terhubung.
+            <br><br>
+            Di usia barumu ini, aku berdoa semoga kamu selalu sehat, bahagia,
+            dan dikelilingi orang-orang baik.
+            Semoga setiap langkahmu dimudahkan, rezekimu dilancarkan,
+            dan semua mimpi yang kamu kejar bisa tercapai satu per satu.
+            <br><br>
+            Terima kasih sudah tetap menjadi teman yang sama hangatnya seperti dulu.
+            Semoga jarak dan waktu nggak pernah mengubah apa pun di antara kita. 🤍✨
+        </p>
+    </div>
+
+    <script>
+        function nextPage() {
+            document.getElementById("page1").classList.remove("active");
+            document.getElementById("page2").classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
